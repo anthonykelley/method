@@ -1,2 +1,31 @@
-<h1>People#show</h1>
-<p>Find me in app/views/people/show.html.erb</p>
+<h1>
+  <%= @person.name %>
+</h1>
+<blockquote>
+  Age: <%= @person.age %>
+</blockquote>
+<br />
+<blockquote>
+  Hair Color: <%= @person.hair_color %>
+</blockquote>
+<br />
+<blockquote>
+  Eye Color: <%= @person.eye_color %>
+</blockquote>
+<br />
+<blockquote>
+  Gender: <%= @person.gender %>
+</blockquote>
+<br />
+<blockquote>
+  Alive: <%= @person.alive %>
+</blockquote>
+<br />
+
+<hr />
+
+<div class='action-buttons'>
+  <%= link_to 'All Posts', people_path %>
+  <%= link_to 'Edit', edit_person_path(@person) %>
+  <%= link_to 'Delete', person_path(@person), method: :delete, data: {confirm: 'Really Delete?'} %>
+</div>

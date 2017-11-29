@@ -1,12 +1,12 @@
 <h1>People</h1>
 <% if @people.any? %>
   <% @people.each do |person| %>
-  <h3>
-    <%= link_to person.title, person_path(person) %>
-  </h3>
+    <h3>
+      <%= link_to person.name, person_path(person) %>
+    </h3>
   <% end %>
-  <% else %>
-    <h4>No People on the List</h4>
-  <% end %>
+<% else %>
+  <h4> No People Listed!</h4>
+<% end %>
 
-  <%= link_to 'Add Person', new_person_path %>
+<%= link_to 'Add New Person', new_person_path %>
